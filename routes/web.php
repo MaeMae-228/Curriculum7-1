@@ -13,5 +13,6 @@ use App\Http\Controllers\PostController;  //外部にあるPostControllerクラ�
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [PostController::class ,'index']);
+Route::get('/posts/{post}', [PostController::class ,'show']);
+// '/posts/{対象データのID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
